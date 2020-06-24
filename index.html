@@ -1,0 +1,89 @@
+# takasiikura.github.io
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title></title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://kotaro666-dev.github.io/portfolio-demo/style.css"/>
+</head>
+<body>
+  <form name="Sample2" action="Sample2.html">
+
+    <div class="one">
+
+      <p class="p">昨年の年収(必須)</p>
+      
+        <div class="input">
+          <input class="input" value="800" type="text" name="X"/>万円
+          <input class="input2" value="400" type="text" name="Y"/>万円
+          <input class="input3" value="10" type="text" name="W"/>万円
+        </div>
+      </div>
+      <input class="btn" type="button" value="診断結果を表示する！" onclick="func1()"/>
+  </form>
+
+
+   <form id="form1">
+     <input type="text" id="input_message" value="">
+     <input type="button" onclick="func1()" value="送信">
+    </form>
+    <div id="output_message"></div>
+
+     <input type="text" id="input" value="">
+     <input type="button" onclick="func1()" value="送信">
+    </form>
+    <div id="output"></div>
+
+    
+    
+    
+    
+    
+    <script language="javascript" type="text/javascript">
+  function func1() {
+      var score;
+      score=80;
+      
+      var w;
+      w = Sample2.W.value;
+
+      var x;
+      x  = Sample2.X.value;
+
+      var y;
+      y  = Sample2.Y.value;
+
+      var z;
+      z  = (parseInt(x) + parseInt(y)) / 3 - (w);
+            console.log(z);   
+
+    var undefined = z;
+    var input_message = document.getElementById("input_message").value;
+    input_message = "入力された内容は「" + z + "」です。";
+    document.getElementById("output_message").innerHTML = input_message;
+
+
+    if(z<0) {
+
+    var input_message = document.getElementById("input_message").value;
+    input_message = "入力された内容は「" + 0 + "」です。";
+    document.getElementById("output_message").innerHTML = input_message;
+
+
+    if ( z < 0) {
+          var input = document.getElementById("input").value;
+    input_message =("該当する金融機関はありませんでした。条件を変えて再度診断してください。") ;
+    document.getElementById("output").innerHTML = input_message;
+
+    
+  }
+   
+    }
+  }
+
+    function keisan() {
+    }
+  </script>
+</body>
+</html>
